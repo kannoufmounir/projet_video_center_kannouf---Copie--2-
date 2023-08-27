@@ -1,0 +1,24 @@
+		<div class="d-flex justify-content-center mt-4">
+				<a class="btn btn-outline-secondary rounded-0 p-4" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+					Détails
+				</a>
+			</div>
+			<div class="collapse" id="collapseExample">
+				<div class="card card-body text-light bg-dark border-0">
+					<br>
+					<tr>
+						<th>ID</th>
+						<td>{{ video.id }}</td>
+					</tr>
+					<br>
+					<tr>
+						<th>Publication</th>
+						<td>{{ video.updatedAt|date('Y-m-d H:i:s') }}</td>
+					</tr><hr>
+					<p class="h4 text-light bg-dark">{{ video.descripation }}</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

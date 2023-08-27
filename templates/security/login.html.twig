@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!
+{% endblock %}
+
+{% block body %}
+	<style>
+		{# .row {
+			border: 1px solid rgb(217, 217, 217);
+			border-radius: 10px;
+			box-shadow: rgb(0, 0, 0);;
+			background-color: whit;
+			transition: box-shadow 0.2s ease-in-out;
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+
+			&:hover {
+				box-shadow: 0 2px 23px rgba(0, 0, 0, 0.2);
+			}
+		}
+
+        .p{
+            s
+        } #}
+	</style>
+
+	<br>
+	<div class="container   ">
+		<div class="row justify-content-center p-2 mt-2 mb-1 text-light bg-dark   rounded-0">
+			<div class="col-md-6">
+				<form method="post">
+					{% if error %}
+						<div class="alert alert-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+					{% endif %}
+
+					{% if app.user %}
+						<div class="alert alert-info mb-3">
+							Vous êtes connecté en tant que
+							{{ app.user.userIdentifier }},
+							<a href="{{ path('app_logout') }}">Logout</a>
+						</div>
+					{% endif %}
+<br><br><br><br>
+					<h1 class="h1 mb-3 p-5  font-weight-light">Veuillez vous connecter</h1>
+					<div class="form-group">
+
+						<input class="p-3  mb-3  font-weight-light  rounded-0 " style="width: 100%;" type="email" value="{{ last_username }}" placeholder="Email" name="email" id="inputEmail" class="form-control" autocomplete="email" pa required autofocus>
+					</div>
+					<div class="form-group">
+
+						<input class="p-4 mb-3 font-weight-light form-control rounded-0 " style="width: 100%;" type="password" name="password" id="inputPassword" placeholder="Password" autocomplete="current-password" required>
+
+					</div>
+					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+				<br><br>
+					<button class="btn btn-outline-secondary text-light  rounded-0 p-4 w-25  mb-5" type="submit">
+						Sign in
+					</button>
+					<h1 class="h6 text-light  font-weight-light">
+						Pas encore inscrit.<a href="{{ path('app_register') }}">
+							Créer un compte</a>
+					</h1>
+						<p class="h6 text-light  font-weight-light">
+						<a href="{{ path('app_forgot_password_request') }}">
+							Mot de passe oublié</a>
+					</p>
+					<br><br><br><br><br><br><br><br>
+				</form>
+			</div>
+		</div>
+	</div><br><br><br><br>
+{% endblock %}

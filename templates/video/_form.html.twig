@@ -1,0 +1,22 @@
+{{ form_start(form) }}
+<div class="shadow-sm p-5 text-center bg-dark">
+	<div class="bg-dark-tertiary rounded w-100">
+
+		<div class="d-flex justify-content-center">
+			<button class="btn btn-primary rounded-0 p-4">{{ button_label|default('Enregister') }}</button>
+
+			<a class="btn btn-secondary rounded-0 p-4" href="{{ path('app_home') }}">Router a l'acceuil</a>
+			
+		</div>
+	</div>
+</div>
+
+<div class="p-5 container  text-light mt-4">
+
+	{{ form_widget(form) }}
+	
+
+	{{ form_end(form) }}
+
+</div>
+<hr>

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+
+{% block body %}
+<div class=" p-2 ml-5 mr-5  mt-5  bg-dark pl-5 pr-5  rounded-0 ">
+	<div class="container p-5 mt-0 mb-5 pl-5 pr-5 text-white bg-dark   rounded-0    ">
+		<div class="row justify-content-center p-5 ">
+			<div class=" p-3  mb-3  font-weight-light  rounded-0 " style="width: 100%;">
+				{% for flash_error in app.flashes('verify_email_error') %}
+					<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+				{% endfor %}
+
+				<h1>Register</h1>
+
+				{{ form_start(registrationForm) }}
+				<div class=" form-group  w-100 d-flex  rounded">
+					{{ form_label(registrationForm.Firstname) }}
+					{{ form_widget(registrationForm.Firstname, {'attr': {'class': 'form-control p-4 rounded-0 border-1'}}) }}
+				</div>
+
+				<div class="form-group   w-100 d-flex rounded"  >
+					{{ form_label(registrationForm.Lastname) }}
+					{{ form_widget(registrationForm.Lastname, {'attr': {'class': 'form-control p-4 rounded-0'}}) }}
+				</div>
+
+				<div class="form-group w-100 d-flex ">
+					{{ form_label(registrationForm.email) }}
+					{{ form_widget(registrationForm.email, {'attr': {'class': 'form-control p-4 rounded-0'}}) }}
+				</div>
+
+				<div class="form-group  w-100 d-flex ">
+					{{ form_label(registrationForm.plainPassword, 'Password') }}
+					{{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control p-4 rounded-0'}}) }}
+				</div>
+				<br>
+				<div class="form-check mb-3 mt-0 rounded-3 w-100 d-flex ">
+					{{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input rounded-0'}}) }}
+					{{ form_label(registrationForm.agreeTerms, 'I agree to the terms', {'label_attr': {'class': 'form-check-label rounded-0'}}) }}
+				</div>
+
+				<button type="submit" class="btn btn-outline-light p-4 rounded-0 W-20">Register</button>
+				{{ form_end(registrationForm) }}
+			</div>
+		</div>
+	</div>
+    </div>
+{% endblock %}

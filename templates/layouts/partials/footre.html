@@ -1,0 +1,131 @@
+<!-- Remove the container if you want to extend the Footer to full width. -->
+
+
+
+<style>
+  .rah {
+    background-color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    padding-right: 100;
+    margin-left: 1400px;
+    border: 2px solid white;
+    color: white;
+  }
+
+  .rah:hover {
+    background-color: rgb(224, 224, 224);
+    padding: 12px 16px;
+    padding-right: 100;
+    margin-left: 1400px;
+    color: black;
+  }
+</style>
+
+
+<!-- Footer -->
+<footer class="text-center text-white" style="  background-color: rgb(0, 0, 0);">
+  <!-- Grid container -->
+  <div class="container">
+    <!-- Section: Links -->
+    <section class="mt-5">
+      <!-- Grid row-->
+      <div class="row text-center d-flex justify-content-center pt-5">
+        <!-- Grid column -->
+        <div class="col-md-2">
+          <h6 class="text-uppercase font-weight-bold text-light">
+            <a class="text-white" href="{{ path('app_home') }}"> Home </a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2">
+          <h6 class="text-uppercase font-weight-bold">
+            <a class="text-white" href="{{ path('app_video_create') }}"> Créer vidéo </a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+
+        <!-- Grid column -->
+
+
+
+        <!-- Grid column -->
+        <div class="col-md-2">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!" class="text-white">Contact</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row-->
+    </section>
+    <!-- Section: Links -->
+
+    <hr class="my-5" />
+
+    <!-- Section: Text -->
+    <main class="text-center  mt-5 mb-5 ">
+      <div class="p-5 rounded">
+        <h1 class="text-light">Bienvenue sur Video Center</h1>
+        <p class="lead text-light">Sur ce site touverez plusiers videos interessantes. Pour certaines
+          <br>videos if faudra etre enregistre pour les voirs
+        </p>
+
+      </div>
+
+    </main>
+
+    <!-- Section: Text -->
+
+
+    <!-- Section: Social -->
+    <section class="text-center mb-5">
+      <a href="" class="text-white me-4">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-github"></i>
+      </a>
+    </section>
+    <!-- Section: Social -->
+  </div>
+  <!-- Grid container -->
+
+  <button class="rah" onclick="scrollToTop()">
+    Retour en haut <i class="fas fa-arrow-up"></i>
+  </button>
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2023 Copyright:
+    <a class="text-white" href="https://www.kannouf.shop">Mounirk..</a>
+  </div>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<!-- End of .container -->
+
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
